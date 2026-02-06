@@ -1,0 +1,126 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9%;
+  padding-top: 10%;
+  background: #ffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary-btn {
+  background: #ed6a1e;
+  color: #fff;
+  padding: 0.9rem 40px;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.primary-btn:hover::before {
+  left: 100%;
+}
+
+
+.primary-btn:hover {
+  background: #cf5c17;
+  box-shadow: 0 6px 16px rgba(237, 106, 30, 0.35);
+}
+
+
+.secondary-btn {
+  background: transparent;
+  color: #f57c0a;
+  border: 2px solid #f48d34;
+  padding: 0.9rem 35px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.secondary-btn::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f57c0a, #f57c0a);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+
+.secondary-btn:hover {
+  color: #fff;
+  background: #f57c0a;
+  box-shadow: 0 0 14px rgba(245, 124, 10, 0.35);
+}
+
+.secondary-btn:hover::after {
+  opacity: 1;
+}
+
+
+.secondary-btn:active {
+  transform: scale(0.96);
+}
+
+.primary-btn:active,
+.secondary-btn:active {
+  transform: scale(0.96);
+}
+
+
+
